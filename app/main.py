@@ -46,7 +46,7 @@ app = FastAPI(
 origins = [
     "http://localhost",
     "http://localhost:8501",
-    "https://resumeanalyzer-7pkofefrwoy2gqvprzxauq.streamlit.app/" ,# Default Streamlit development port.
+    # Default Streamlit development port.
     # Add any other origins if needed (e.g., deployed frontend URL).
 ]
 
