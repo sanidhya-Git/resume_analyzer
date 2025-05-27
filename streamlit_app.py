@@ -8,7 +8,7 @@ from requests.models import Response # Type hint for requests response object.
 # --- Configuration ---
 # The URL where the FastAPI backend's '/analyze/' endpoint is running.
 # Ensure this matches the host and port where you run uvicorn.
-FASTAPI_URL: str = "http://127.0.0.1:8000/analyze/"
+FASTAPI_URL: str = "https://resumerender.streamlit.app/analyze/"
 # "https://resumeanalyzer-6qcnjyrjlmvc8nrpsxac7y.streamlit.app/analyze/"
 
 # --- Streamlit Page Setup ---
@@ -16,7 +16,7 @@ FASTAPI_URL: str = "http://127.0.0.1:8000/analyze/"
 st.set_page_config(page_title="AI Resume Analyzer", layout="wide", initial_sidebar_state="collapsed")
 
 # --- Application UI ---
-st.title("📄 AI Resume Analyzer Demo")
+st.title("AI Resume Analyzer Demo")
 st.markdown("""
 Upload a candidate's resume and a job description (both in PDF format).
 The application will call a backend API to analyze the resume and compare it against the job description using AI.

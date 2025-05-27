@@ -44,8 +44,8 @@ app = FastAPI(
 # This allows the Streamlit frontend (running on a different port/origin)
 # to make requests to this FastAPI backend.
 origins = [
-    "http://localhost",
-    "http://localhost:8501", # Default Streamlit development port.
+    "https://resumerender.streamlit.app",
+    # Default Streamlit development port.
     # Add any other origins if needed (e.g., deployed frontend URL).
 ]
 
