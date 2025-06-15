@@ -9,7 +9,7 @@ from requests.models import Response # Type hint for requests response object.
 # --- Configuration ---
 # The URL where the FastAPI backend's '/analyze/' endpoint is running.
 # Ensure this matches the host and port where you run uvicorn.
-FASTAPI_URL: str = "http://127.0.0.1:8000/analyze/"
+FASTAPI_URL: str = "https://resumerender.streamlit.app/analyze/"
 
 # --- Streamlit Page Setup ---
 # Configure the page title, icon, and layout.
