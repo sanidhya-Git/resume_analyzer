@@ -2,7 +2,7 @@
 
 import streamlit as st
 import requests 
-from typing import Optional, Dict, Any, Tuple, List .
+from typing import Optional, Dict, Any, Tuple, List
 from streamlit.runtime.uploaded_file_manager import UploadedFile 
 from requests.models import Response 
 
