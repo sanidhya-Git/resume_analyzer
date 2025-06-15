@@ -1,7 +1,4 @@
-"""
-Defines the FastAPI application, endpoints, middleware, and startup logic
-for the AI Resume Analyzer API.
-"""
+
 
 import time
 from typing import Dict, List # Added Dict and List for type hinting.
@@ -44,8 +41,10 @@ app = FastAPI(
 # This allows the Streamlit frontend (running on a different port/origin)
 # to make requests to this FastAPI backend.
 origins = [
+    "http://localhost",
+    "http://localhost:8501",
     "https://resumerender.streamlit.app",
-    # Default Streamlit development port.
+     # Default Streamlit development port.
     # Add any other origins if needed (e.g., deployed frontend URL).
 ]
 
