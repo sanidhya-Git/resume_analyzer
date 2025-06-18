@@ -1,14 +1,14 @@
 fastapi
 uvicorn[standard]
 pydantic
-pydantic-settings # Needed for app/config.py
+pydantic-settings 
 python-dotenv
 langchain
 langchain-google-genai
 langchain-community
 pypdf
 faiss-cpu
-sentence-transformers # Often a dependency
-requests # For Streamlit to call FastAPI
+sentence-transformers 
+requests 
 streamlit
 python-multipart
