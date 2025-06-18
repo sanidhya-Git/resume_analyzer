@@ -1,34 +1,30 @@
 
 
 import streamlit as st
-import requests # Library to make HTTP requests to the FastAPI backend.
-from typing import Optional, Dict, Any, Tuple, List # For type hinting.
-from streamlit.runtime.uploaded_file_manager import UploadedFile # Type hint for uploaded files.
-from requests.models import Response # Type hint for requests response object.
+import requests 
+from typing import Optional, Dict, Any, Tuple, List 
+from streamlit.runtime.uploaded_file_manager import UploadedFile 
+from requests.models import Response 
 
-# --- Configuration ---
-# The URL where the FastAPI backend's '/analyze/' endpoint is running.
-# Ensure this matches the host and port where you run uvicorn.
+
 FASTAPI_URL: str = "https://resume-analyzer-rv58.onrender.com/analyze/"
 
-# --- Streamlit Page Setup ---
-# Configure the page title, icon, and layout.
+
 st.set_page_config(page_title="AI Resume Analyzer", layout="wide", initial_sidebar_state="collapsed")
 
-# --- Application UI ---
+
 st.title("📄 AI Resume Analyzer Demo")
 st.markdown("""
 Upload a candidate's resume and a job description (both in PDF format).
 The application will call a backend API to analyze the resume and compare it against the job description using AI.
 """)
-# Add a note indicating the backend dependency
+
 st.caption("*(Ensure the FastAPI backend server is running)*")
 
-# Use columns for a side-by-side layout for file uploaders.
+
 col1, col2 = st.columns(2)
 
-# Declare variables for uploaded files with type hints.
-# Using Optional because they are None until the user uploads a file.
+
 resume_file: Optional[UploadedFile] = None
 jd_file: Optional[UploadedFile] = None
 
