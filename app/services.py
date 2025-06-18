@@ -10,10 +10,10 @@ This module contains functions for:
 
 import os
 import tempfile
-from typing import List, Optional, Tuple # Added Optional and Tuple for type hints.
+from typing import List, Optional, Tuple 
 import time
 
-# LangChain and Google AI imports..
+
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -25,10 +25,7 @@ from langchain_core.documents import Document
 from .config import settings
 from .schemas import ResumeAnalysis, SimilarityResult, RelevantChunk
 
-# --- Global Variables for Initialized Components ---
-# Initialize components once when the module is loaded.
-# This avoids re-initialization on every API request, improving performance.
-# Use Optional type hint as they start as None.
+
 llm: Optional[ChatGoogleGenerativeAI] = None
 embeddings: Optional[GoogleGenerativeAIEmbeddings] = None
 initialization_error: Optional[str] = None # Store any error during init.
